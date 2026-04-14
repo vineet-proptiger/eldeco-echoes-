@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <GoogleTagManager gtmId="GTM-575H8R87" />
       <body className={`${openSans.variable} ${montserrat.variable} ${cormorant.variable} ${nephilm.variable} font-sans text-dark antialiased`}>
-{children}
+        {children}
       </body>
     </html>
   )
