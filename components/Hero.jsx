@@ -118,13 +118,13 @@ const Hero = ({ setIsOpen }) => {
                 data-aos="fade-up" data-aos-delay="300">
                 Sector 22D, Yamuna Expressway, Greater Noida
               </p>
-              <p style={{
+              {/* <p style={{
                 fontFamily: F_SANS, fontSize: '11px', color: '#6b7280', margin: '3px 0 0',
                 letterSpacing: '0.01em'
               }}
                 data-aos="fade-up" data-aos-delay="320">
                 Near Jewar International Airport – Future Growth Corridor
-              </p>
+              </p> */}
             </div>
 
             {/* ── Tagline Pills ── */}
@@ -132,20 +132,33 @@ const Hero = ({ setIsOpen }) => {
               background: 'var(--color-gold-bg)',
               borderRadius: '12px',
               padding: '14px 18px',
-              textAlign: 'center',
+              textAlign: 'start',
               border: '1px solid var(--color-gold-light)',
             }}
               data-aos="fade-up" data-aos-delay="320">
               {[
-                'Own Spacious 3 BHK Residences Designed For Modern Families',
-                'Family-Centric Community Living',
-                '80% Open With ~3 Acre Central Greens',
+                'Luxury 3 BHK Residences',
+                'Special Pre-Launch Price',
+                'Close to Jewar International Airport',
               ].map((tag, i) => (
                 <p key={i} style={{
+                  display: 'flex', alignItems: 'center', gap: '10px',
                   fontFamily: F_JOST, fontSize: '14px',
                   fontWeight: '600', color: 'var(--color-primary)',
-                  margin: i === 0 ? '0' : '4px 0 0', letterSpacing: '0.01em',
-                }}>{tag}</p>
+                  margin: i === 0 ? '0' : '8px 0 0', letterSpacing: '0.01em',
+                }}>
+                  <span style={{
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    width: '18px', height: '18px', borderRadius: '50%',
+                    background: 'rgba(22, 163, 74, 0.15)',
+                    color: 'var(--color-primary)', flexShrink: 0,
+                  }}>
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L4 7L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  {tag}
+                </p>
               ))}
             </div>
 
