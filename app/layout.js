@@ -39,11 +39,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Script id="gtag-init" strategy="beforeInteractive" dangerouslySetInnerHTML={{
-        __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());`
-      }} />
       <GoogleTagManager gtmId="GTM-575H8R87" />
       <body className={`${openSans.variable} ${montserrat.variable} ${cormorant.variable} ${nephilm.variable} font-sans text-dark antialiased`}>
+        <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{
+          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());`
+        }} />
         {children}
       </body>
     </html>
